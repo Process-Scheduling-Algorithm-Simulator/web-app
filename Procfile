@@ -1,1 +1,1 @@
-web : gunicorn cpuSchedular.wsgi
+web: gunicorn cpuScehdular.wsgi
