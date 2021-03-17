@@ -33,80 +33,75 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Mr. Schedular<br />
-											by NITK-IT</h1>
+											<h1>CPU Scheduling</h1>
 											<p>A place which makes Operating systems fun !!</p>
 										</header>
-										<p>Mr.Schedular tutorial website for Operating systems with a game background which allows users to learn CPU scheduling and other OS concepts in a fun way. 
-                                            It contains expanations, psuedo-codes, simulations, videos and questions to get deeper, finer and clearer understanding of the topics.
-                                            This website was built as a OS course project for NITK-IT'23.
+										<p>CPU scheduling is a process that allows one process to use the CPU while the 
+											execution of another process is on hold(in waiting state) due to unavailability of any 
+											resource like I/O etc, thereby making full use of CPU. The aim of CPU scheduling is to 
+											make the system efficient, fast, and fair.
                                         </p>
 										<ul class="actions">
 											<li><a href="#" class="button big">Learn More</a></li>
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="{% static 'images/os.jpg' %}" alt="os pic" />
+										<img src="{% static 'images/cpu.jpg' %}" alt="os pic" />
 									</span>
 								</section>
 
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Features</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon far fa-file-alt"></span>
-											<div class="content">
-												<h3>Explanations</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fas fa-code"></span>
-											<div class="content">
-												<h3>Psuedo codes</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fas fa-tv"></span>
-											<div class="content">
-												<h3>Simulations</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fas fa-question"></span>
-											<div class="content">
-												<h3>Quiz</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-									</div>
-								</section>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Topics</h2>
+										<h2>Articles</h2>
 									</header>
 									<div class="posts">
 										<article>
 											<a href="#" class="image"></a>
-											<h3>CPU Scheduling</h3>
+											<h3>First Come First Serve</h3>
 											<p>FCFS is the simplest scheduling algorithm. FCFS simply queues processes in the order that they arrive in the ready queue. In this ...</p>
 											<ul class="actions">
-												<li><a href="/cpuAlgo/" class="button">Read More</a></li>
+												<li><a href="/cpuAlgo/1/" class="button">Read More</a></li>
 											</ul>
 										</article>
 										<article>
 											<a href="#" class="image"></a>
-											<h3>Socket programming</h3>
+											<h3>Round Robin</h3>
 											<p>Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slot in a cyclic way. It is simple, easy to implement, and ... </p>
 											<ul class="actions">
-												<li><a href="/sockets/" class="button">Read More</a></li>
+												<li><a href="/cpuAlgo/2/" class="button">Read More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"></a>
+											<h3>Priority Non Preemptive</h3>
+											<p>Priority Scheduling is a method of scheduling processes that is based on priority. In this algorithm, the scheduler selects the tasks to work as ...</p>
+											<ul class="actions">
+												<li><a href="/cpuAlgo/3/" class="button">Read More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"></a>
+											<h3>Priority Preemptive</h3>
+											<p>Priority Scheduling is a method of scheduling processes that is based on priority. In this algorithm, the scheduler selects the tasks to work as ...</p>
+											<ul class="actions">
+												<li><a href="/cpuAlgo/4/" class="button">Read More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"></a>
+											<h3>Shortest Job First</h3>
+											<p>Shortest job first (SJF) or shortest job next, is a scheduling policy that selects the waiting process with the smallest execution time to execute ...</p>
+											<ul class="actions">
+												<li><a href="/cpuAlgo/5/" class="button">Read More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"></a>
+											<h3>Shortest Remaining Job First</h3>
+											<p>Shortest Remaining Time First (SRTF) is the preemptive version of Shortest Job Next (SJN) algorithm, where the processor is allocated to ... </p>
+											<ul class="actions">
+												<li><a href="/cpuAlgo/6/" class="button">Read More</a></li>
 											</ul>
 										</article>
 									</div>
@@ -132,7 +127,7 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="">Homepage</a></li>
+										<li><a href="/">Homepage</a></li>
 										<li><a href="#">Generic</a></li>
 										<li><a href="#">Elements</a></li>
 										<li>
