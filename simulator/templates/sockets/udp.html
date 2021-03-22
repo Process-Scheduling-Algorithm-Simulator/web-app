@@ -5,9 +5,20 @@
 		<title>Mr. Schedular</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
-        <link rel="stylesheet" href="{% static '/CSS/sockets.css' %}">
-        <script type="text/javascript" src="{% static '/js/sockets.js' %}"></script>
+		<link rel="stylesheet" href="{% static '/CSS/sockets.css' %}">
+		<script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    sectionsColor: ['#00000'],
+                    anchors: ['anime','console','tcp','udp'],
+                    menu: '#menu',
+                    easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+                });
+            });
+        </script>
 	</head>
 	<body class="is-preload">
 
@@ -54,21 +65,18 @@
 									<header class="major">
 										<h2>Simulation</h2>
 									</header>
-                                    
 
                                     <div class="section" id="section3">
-                                        <div class="container" style="padding-top: 15%">
-                                          <h2 class="text-center">User Datagram Protocol</h2>
-                                      
+                                        <div class="container">    
                                           <div id ="myContainer_u" style = "margin-left:300px;margin-top:75px;"><div id ="myAnimation_u"></div></div>
                                           <div id ="Server_u" style = "margin-left:275px;margin-top:-25px"><p id = 'Serverlabel'>Server</p></div>
                                           <div id ="Client_u" style = "margin-left:800px;margin-top:-53px"><p id = 'Clientlabel'>Client</p></div>
-                                          <br>
-                                          <div class="row">
-                                            <button onclick="socket_u()" class="btn btn-success" style="margin-left: 440px; margin-right: 10px;" >Socket</button> 
-                                            <button onclick="bind_u()" class="btn btn-success" style="margin-right: 10px;">Bind</button>
-                                            <button onclick="send_u()" class="btn btn-success" style="margin-right: 10px;">Send</button> 
-                                            <button onclick="receive_u()" class="btn btn-success" style="margin-right: 10px;">Receive</button> 
+                                          <br/><br/>
+                                          <div class="row" style="align-items: center;">
+                                            <button onclick="socket_u()" class="button" style="margin-right: 10px; margin-left: 30%;">Socket</button> 
+                                            <button onclick="bind_u()" class="button" style="margin-right: 10px;">Bind</button>
+                                            <button onclick="send_u()" class="button" style="margin-right: 10px;">Send</button> 
+                                            <button onclick="receive_u()" class="button" style="margin-right: 10px;">Receive</button> 
                                           </div>
                                       </div>
                                   </div>
@@ -94,7 +102,7 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="">Homepage</a></li>
+										<li><a href="/">Homepage</a></li>
 										<li><a href="#">Generic</a></li>
 										<li><a href="#">Elements</a></li>
 										<li>
@@ -178,6 +186,7 @@
 			<script src="{% static 'assets/js/util.js' %}"></script>
 			<script src="{% static 'assets/js/main.js' %}"></script>
             <script src="{% static 'CSS/index.css' %}"></script>
+			<script type="text/javascript" src="{% static '/js/sockets.js' %}"></script>
 
 	</body>
 </html>

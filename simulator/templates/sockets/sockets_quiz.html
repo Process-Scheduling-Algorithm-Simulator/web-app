@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+	<head>
+	<!--
+		Author: Philip Harrell
+		Description: Quiz
+	-->
+		<title>Quiz</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static 'CSS/quiz.css' %}" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div id="quiz">
+				<h1 class="title">Sockets Programming Quiz</h1>
+				<div id="question-group">
+					<h2 class="question" id="question"></h2>
+					<h3 id="score" class="hide"></h3>
+					<p id="answers" class="hide"><a id="show-answers">Show Answers</a></p>
+					<div class="choice-group">
+						<form class="choices"></form>
+					</div>
+					<div class="buttons">
+						<button class="btn btn-primary" id="next">Next</button>
+						<button class="btn btn-primary hide" id="reset">Try again</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+		<script src="{% static 'js/sockets_quiz.js' %}"></script>
+
+	</body>
+
+</html>

@@ -37,102 +37,31 @@
 									<header class="main">
 										<h1>{{ algo.algo_name}}</h1>
 									</header>
-
-									<h2>Description</h2>
-									<p>{{ algo.algo_description |linebreaksbr}}</p>
+									<hr class="major" />
 
 									<header class="major">
-										<h2>Features</h2>
+										<h2>Description</h2>
 									</header>
-									<div class="features">
-										<article>
-											<span class="icon far fa-file-alt"></span>
-											<div class="content">
-												<h3>Explanations</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fas fa-code"></span>
-											<div class="content">
-												<h3>Psuedo codes</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fas fa-tv"></span>
-											<div class="content">
-												<h3>Simulations</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fas fa-question"></span>
-											<div class="content">
-												<h3>Quiz</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-									</div>
+									<p>{{ algo.algo_description |linebreaksbr}}</p>
+									<hr class="major" />
+
+									<header class="major">
+										<h2>Algorithm</h2>
+									</header>
+										<pre>
+											<code>
+												{{algo.algo_code |linebreaksbr}}
+											</code>
+									</pre>
+									<hr class="major" />
+
+									<header class="major">
+										<h2>Simulation</h2>
+									</header>
+
 								</section>
 
 							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Topics</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"></a>
-											<h3>CPU Scheduling</h3>
-											<p>FCFS is the simplest scheduling algorithm. FCFS simply queues processes in the order that they arrive in the ready queue. In this ...</p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/" class="button">Read More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"></a>
-											<h3>Round Robin</h3>
-											<p>Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slot in a cyclic way. It is simple, easy to implement, and ... </p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/2/" class="button">Read More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"></a>
-											<h3>Priority Non Preemptive</h3>
-											<p>Priority Scheduling is a method of scheduling processes that is based on priority. In this algorithm, the scheduler selects the tasks to work as ...</p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/3/" class="button">Read More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"></a>
-											<h3>Priority Preemptive</h3>
-											<p>Priority Scheduling is a method of scheduling processes that is based on priority. In this algorithm, the scheduler selects the tasks to work as ...</p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/4/" class="button">Read More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"></a>
-											<h3>Shortest Job First</h3>
-											<p>Shortest job first (SJF) or shortest job next, is a scheduling policy that selects the waiting process with the smallest execution time to execute ...</p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/5/" class="button">Read More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"></a>
-											<h3>Shortest Remaining Job First</h3>
-											<p>Shortest Remaining Time First (SRTF) is the preemptive version of Shortest Job Next (SJN) algorithm, where the processor is allocated to ... </p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/6/" class="button">Read More</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
-
 						</div>
 					</div>
 
@@ -153,7 +82,7 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="">Homepage</a></li>
+										<li><a href="/">Homepage</a></li>
 										<li><a href="#">Generic</a></li>
 										<li><a href="#">Elements</a></li>
 										<li>

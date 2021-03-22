@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -7,6 +6,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+        <link rel="stylesheet" href="{% static '/CSS/sockets.css' %}">
+        <script type="text/javascript" src="{% static '/js/sockets.js' %}"></script>
 	</head>
 	<body class="is-preload">
 
@@ -30,89 +31,67 @@
 								</header>
 
 							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>CPU Scheduling</h1>
-											<p>A place which makes Operating systems fun !!</p>
-										</header>
-										<p>CPU scheduling is a process that allows one process to use the CPU while the 
-											execution of another process is on hold(in waiting state) due to unavailability of any 
-											resource like I/O etc, thereby making full use of CPU. The aim of CPU scheduling is to 
-											make the system efficient, fast, and fair.
-                                        </p>
-										<ul class="actions">
-											<li><a href="#" class="button big">Learn More</a></li>
-										</ul>
-									</div>
-									<span style="margin-left: 10px;">
-										<img src="{% static 'images/cpu.jpg' %}" alt="os pic" style="height: 300px; width: 600px;" />
-									</span>
-								</section>
+								
 
 							<!-- Section -->
 								<section>
-									<header class="major">
-										<h2>Articles</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"></a>
-											<h3>First Come First Serve</h3>
-											<p>FCFS is the simplest scheduling algorithm. FCFS simply queues processes in the order that they arrive in the ready queue. In this ...</p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/1/" class="button">Read More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"></a>
-											<h3>Round Robin</h3>
-											<p>Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slot in a cyclic way. It is simple, easy to implement, and ... </p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/2/" class="button">Read More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"></a>
-											<h3>Priority Non Preemptive</h3>
-											<p>Priority Scheduling is a method of scheduling processes that is based on priority. In this algorithm, the scheduler selects the tasks to work as ...</p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/3/" class="button">Read More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"></a>
-											<h3>Priority Preemptive</h3>
-											<p>Priority Scheduling is a method of scheduling processes that is based on priority. In this algorithm, the scheduler selects the tasks to work as ...</p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/4/" class="button">Read More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"></a>
-											<h3>Shortest Job First</h3>
-											<p>Shortest job first (SJF) or shortest job next, is a scheduling policy that selects the waiting process with the smallest execution time to execute ...</p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/5/" class="button">Read More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"></a>
-											<h3>Shortest Remaining Job First</h3>
-											<p>Shortest Remaining Time First (SRTF) is the preemptive version of Shortest Job Next (SJN) algorithm, where the processor is allocated to ... </p>
-											<ul class="actions">
-												<li><a href="/cpuAlgo/6/" class="button">Read More</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
 
-								<section>
-									<header class="major">
-										<h2>Quiz</h2>
+									<header class="main">
+										<h1>Bully Algorithm</h1>
 									</header>
-									<p>You can attempt a quiz by clicking <a href="/cpuAlgo/quiz/">here</a></p>
-								</section>
+
+									<header class="major">
+										<h2>Description</h2>
+									</header>
+									<p>This algorithm applies to system where every process can send a message to every other process in the system.
+                                        In distributed computing, the bully algorithm is a method for dynamically electing a coordinator or leader from 
+                                        a group of distributed computer processes. The process with the highest process ID number from amongst the 
+                                        non-failed processes is selected as the coordinator.
+                                    </p>
+
+                                    <hr class="major" />
+
+                                    <header class="major">
+										<h2>Algorithm</h2>
+									</header>
+                                    Suppose process P sends a message to the coordinator.
+
+                                    <ul>
+                                        <li>If coordinator does not respond to it within a time interval T, then it is assumed that coordinator has failed.</li>
+                                        <li>Now process P sends election message to every process with high priority number.</li>
+                                        <li>It waits for responses, if no one responds for time interval T then process P elects itself as a coordinator.</li>
+                                        <li>Then it sends a message to all lower priority number processes that it is elected as their new coordinator.</li>
+                                        <li>However, if an answer is received within time T from any other process Q,
+                                            <ol>
+                                                <li>Process P again waits for time interval T’ to receive another message from Q that it has been elected as coordinator.</li>
+                                                <li>If Q doesn’t responds within time interval T’ then it is assumed to have failed and algorithm is restarted.</li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+
+                                    <hr class="major" />
+
+									<header class="major">
+										<h2>Simulation</h2>
+									</header>
+
+                                    <ul>
+                                        <li><h5>Process 2 sends a message to the coordinator</h5></li><br/>
+                                            <img src="{% static '/images/bully/1.gif' %}" alt="hmm" height="400px" width="700px"/>
+                                        <li><h5>Process 2 does not receive a reply from the coordinator process and declares the coordinator is failed</h5></li><br/>
+                                            <img src="{% static '/images/bully/2.png' %}" alt="hmm" height="400px" width="700px"/>
+                                        <li><h5>Process 2 informs all the processes having greater priority and calls for an election</h5></li><br/>
+                                            <img src="{% static '/images/bully/3.gif' %}" alt="hmm" height="400px" width="700px"/>
+                                        <li><h5>All the informed processes can contest for election and informs higher priority processes that the process is contesting.</h5></li><br/>
+                                            <img src="{% static '/images/bully/4.gif' %}" alt="hmm" height="400px" width="700px"/>
+                                        <li><h5>The contesting process with highest priority chooses itself as the coordinator and informs rest of the contestents</h5></li><br/>
+                                            <img src="{% static '/images/bully/5.gif' %}" alt="hmm" height="400px" width="700px"/>
+                                        <li><h5>The process 5 is the new coordinator</h5></li><br/>
+                                            <img src="{% static '/images/bully/6.gif' %}" alt="hmm" height="400px" width="700px"/>
+                                    </ul>
+
+                                    
+									
 
 						</div>
 					</div>
