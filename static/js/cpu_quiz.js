@@ -1,33 +1,28 @@
 "use strict"
 var questions = [
   {
-    question: "Where am I from?",
-    choices: ["Dallas", "Austin", "Boston", "New York"],
+    question: "Which scheduling algorithm allocates the CPU first to the process that requests the CPU first?",
+    choices: ["first-come, first-served scheduling", "shortest job scheduling", "priority scheduling", "none of the mentioned"],
     correctAnswer: 0
   },
   {
-    question: "When was I born?",
-    choices: ["1998", "1979", "2005", "1988"],
-    correctAnswer: 3
+    question: "In priority scheduling algorithm ____________",
+    choices: ["CPU is allocated to the process with highest priority", "CPU is allocated to the process with lowest priority", "Equal priority processes can not be scheduled", "None of the mentioned"],
+    correctAnswer: 0
   },
   {
-    question: "What is my favorite band?",
-    choices: ["Modest Mouse", "Squarepusher", "Aphex Twin", "Green Day"],
+    question: "The interval from the time of submission of a process to the time of completion is termed as:",
+    choices: ["waiting time", "turnaround time", "response time", "throughput"],
     correctAnswer: 1
   },
   {
-    question: "Who is the best kitty?",
-    choices: ["Gus", "Rocky", "Phatty", "Chester"],
-    correctAnswer: 0
+    question: "Process are classified into different groups in:",
+    choices: ["shortest job scheduling algorithm", "round robin scheduling algorithm", "priority scheduling algorithm", "multilevel queue scheduling algorithm"],
+    correctAnswer: 3
   },
   {
-    question: "What is 548 + 23?",
-    choices: ["265", "565", "571", "575"],
-    correctAnswer: 2
-  },
-  {
-    question: "Who designed Fallingwater?",
-    choices: ["Brendan Eich", "Frank Lloyd Wright", "Taylor Swift", "Bob Barker"],
+    question: "Time quantum is defined in:",
+    choices: ["shortest job scheduling algorithm", "round robin scheduling algorithm", "priority scheduling algorithm", "multilevel queue scheduling algorithm"],
     correctAnswer: 1
   }
 ];

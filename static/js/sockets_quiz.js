@@ -1,33 +1,28 @@
 "use strict"
 var questions = [
   {
-    question: "Where am I from hello?",
-    choices: ["Dallas", "Austin", "Boston", "New York"],
-    correctAnswer: 0
-  },
-  {
-    question: "When was I born?",
-    choices: ["1998", "1979", "2005", "1988"],
-    correctAnswer: 3
-  },
-  {
-    question: "What is my favorite band?",
-    choices: ["Modest Mouse", "Squarepusher", "Aphex Twin", "Green Day"],
-    correctAnswer: 1
-  },
-  {
-    question: "Who is the best kitty?",
-    choices: ["Gus", "Rocky", "Phatty", "Chester"],
-    correctAnswer: 0
-  },
-  {
-    question: "What is 548 + 23?",
-    choices: ["265", "565", "571", "575"],
+    question: "The client in socket programming must know which information?",
+    choices: ["IP address of Server", "Port number", "Both IP address of Server & Port number", "Only its own IP address"],
     correctAnswer: 2
   },
   {
-    question: "Who designed Fallingwater?",
-    choices: ["Brendan Eich", "Frank Lloyd Wright", "Taylor Swift", "Bob Barker"],
+    question: "The URL Connection class can be used to read and write data to the specified resource that is referred by the URL.",
+    choices: ["True", "False"],
+    correctAnswer: 0
+  },
+  {
+    question: "TCP, FTP, Telnet, SMTP, POP etc. are examples of ___________",
+    choices: ["Socket", "IP Address", "Protocol", "MAC Address"],
+    correctAnswer: 2
+  },
+  {
+    question: "Which classes are used for connection-less socket programming?",
+    choices: ["Datagram Socket", "Datagram Packet", "Both Datagram Socket & Datagram Packet", "Server Socket"],
+    correctAnswer: 2
+  },
+  {
+    question: "Which methods are commonly used in Server Socket class?",
+    choices: ["Public Output Stream get Output Stream ()", "Public Socket accept ()", "Public synchronized void close ()", "Public void connect ()"],
     correctAnswer: 1
   }
 ];

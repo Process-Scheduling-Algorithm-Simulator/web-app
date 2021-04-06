@@ -1,33 +1,28 @@
 "use strict"
 var questions = [
   {
-    question: "Where am I from?",
-    choices: ["Dallas", "Austin", "Boston", "New York"],
-    correctAnswer: 0
-  },
-  {
-    question: "When was I born?",
-    choices: ["1998", "1979", "2005", "1988"],
-    correctAnswer: 3
-  },
-  {
-    question: "What is my favorite band?",
-    choices: ["Modest Mouse", "Squarepusher", "Aphex Twin", "Green Day"],
-    correctAnswer: 1
-  },
-  {
-    question: "Who is the best kitty?",
-    choices: ["Gus", "Rocky", "Phatty", "Chester"],
-    correctAnswer: 0
-  },
-  {
-    question: "What is 548 + 23?",
-    choices: ["265", "565", "571", "575"],
+    question: "In case of failure, a new transaction coordinator can be elected by ____________",
+    choices: ["bully algorithm", "ring algorithm", "both bully and ring algorithm", "none of the mentioned"],
     correctAnswer: 2
   },
   {
-    question: "Who designed Fallingwater?",
-    choices: ["Brendan Eich", "Frank Lloyd Wright", "Taylor Swift", "Bob Barker"],
+    question: "In distributed systems, election algorithms assumes that ____________",
+    choices: ["a unique priority number is associated with each active process in system", "there is no priority number associated with any process", "priority of the processes is not required", "none of the mentioned"],
+    correctAnswer: 0
+  },
+  {
+    question: "According to the ring algorithm, links between processes are ____________",
+    choices: ["bidirectional", "unidirectional", "both bidirectional and unidirectional", "none of the mentioned"],
+    correctAnswer: 1
+  },
+  {
+    question: "In distributed systems, what will the transaction coordinator do?",
+    choices: ["starts the execution of transaction", "breaks the transaction into number of sub transactions", "coordinates the termination of the transaction", "all of the mentioned"],
+    correctAnswer: 3
+  },
+  {
+    question: "If a process is executing in its critical section ____________",
+    choices: ["any other process can also execute in its critical section", "no other process can execute in its critical section", "one more process can execute in its critical section", "none of the mentioned"],
     correctAnswer: 1
   }
 ];
