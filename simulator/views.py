@@ -5,19 +5,19 @@ from .models import *
 
 def get_index(request):
     return render(request, 'index.html')
-    
 
-# CPU scheduling
-def cpuScehdular(request):
-    return render(request, 'cpuAlgos/cpu_main.html')
+# Sockets
+def paging_main(request):
+    return render(request, 'paging/paging_main.html')
 
-def cpuAlgo(request, id):
-    algo = CpuAlgo.objects.filter(algo_id=id)[0]
-    return render(request, 'cpuAlgos/cpu_algo.html', {'algo': algo})
+def fifo(request):
+    return render(request, 'paging/fifo.html')
 
-def cpu_quiz(request):
-    return render(request, 'cpuAlgos/cpu_quiz.html')
+def lru(request):
+    return render(request, 'paging/lru.html')
 
+def paging_quiz(request):
+    return render(request, 'paging/paging_quiz.html')
 
 
 

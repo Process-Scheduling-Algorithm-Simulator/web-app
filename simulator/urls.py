@@ -5,9 +5,10 @@ from django.urls import path
 app_name = 'simulator'
 urlpatterns = [
     path('', views.get_index, name='get_index'),
-    path('cpuAlgo/',views.cpuScehdular, name='cpuScehdular'),
-    path('cpuAlgo/<int:id>/', views.cpuAlgo, name='cpuAlgo'),
-    path('cpuAlgo/quiz/', views.cpu_quiz, name='cpu_quiz'),
+    path('paging/',views.paging_main, name='paging_main'),
+    path('paging/fifo/', views.fifo, name='fifo'),
+    path('paging/lru/', views.lru, name='lru'),
+    path('paging/quiz/', views.paging_quiz, name='paging_quiz'),
 
     path('sockets/',views.sockets, name='sockets'),
     path('sockets/tcp/', views.tcp, name='tcp'),
