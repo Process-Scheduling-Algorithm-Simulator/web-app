@@ -1,12 +1,15 @@
+{% load static %}
 <html>
 <head>
-	<title>PAGE TABLE</title>
+	<title>FCFS</title>
 	<meta charset="utf-8">
 <!--	<meta name="viewport" content="width=device-width,initial-scale=1.0">-->
-
+<link rel="stylesheet" href="{% static 'CSS/fifo.css' %}">
+<link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 </head>
-<body style="background-color:aqua ; text-align: center;">
-<h1> First in First Out Page Replacement </h1>
+<body >
+<h1 style="padding-bottom: 25px; margin-top: -300px;"> First In First Out (FIFO)<br> <img src="{% static 'images/underline.png' %}"  alt="" height="20px" width="300px" style="padding-top: 10px;"/> </h1>
 <script>
 	var logical = [];
 	var framet = [];
@@ -96,14 +99,52 @@
 
 	}
 </script>
+<p style="padding-bottom: 10px;">First In First Out (FIFO):
+This is the simplest page replacement algorithm. In this algorithm, the OS maintains a queue that keeps track of all the pages in memory, with the oldest page at the front and the most recent page at the back.When there is a need for page replacement, the FIFO algorithm, swaps out the page at the front of the queue,that is the page which has been in the memory for the longest time.
+</p>
+<div class="table">
+	<table>
+	  <thead>
+	    <tr>
+			<th style="font-size: 17px;">Advantages:</th>
+	        <th style="font-size: 17px;">Disadvantages:</th>
+
+	    </tr>
+	  </thead>
+	  <tbody >
+	    <tr>
+	      <td data-column="Advantages:" style="font-size: 17px;">FIFO is easy to understand.</td>
+	      <td data-column="Disadvantages:" style="font-size: 17px;">Poor performance.</td>
+	    </tr>
+	    <tr>
+	      <td data-column="Advantages:" style="font-size: 17px;">It is very Easy to Implement.</td>
+	      <td data-column="Disadvantages:" style="font-size: 17px;">Doesn’t consider the frequency of use or last used time, simply replaces the oldest page.</td>
+
+	    </tr>
+	    <tr>
+	      <td data-column="Advantages:" style="font-size: 17px;">Low Overhead.</td>
+	      <td data-column="Disadvantages:" style="font-size: 17px;">Suffers from Belady’s Anomaly(i.e. more page faults when we increase the number of page frames).</td>
+
+	    </tr>
+
+	  </tbody>
+	</table>
+</div>
+
+<hr style="color:black;">
+<div class="center">
+
+
+<h2>SIMULATION:</h2>
+
 Number of Pages:<input type="text" id="np"></input>
 Number of Frames:<input type="text" id="nf"></input><button onclick="inputVirtual()" value="Add">Add</button>
 <br><br>
-<div>
+<div id="simulation">
 	<table style="display:inline-block;" id="vtable" border="1">
 		<tr>
-			<th>Data</th>
-			<th>Page number</th>
+			<th style="font-size: 15px;">Data</th>
+			<th style="font-size: 15px;">Page number</th>
 		</tr>
 
 
@@ -111,8 +152,8 @@ Number of Frames:<input type="text" id="nf"></input><button onclick="inputVirtua
 
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	<table style="display:inline-block;" border="1" id="r">
 		<tr>
-			<th>frame number</th>
-			<th>data</th>
+			<th style="font-size: 15px;">frame number</th>
+			<th style="font-size: 15px;">data</th>
 		</tr>
 
 	</table>
@@ -120,15 +161,16 @@ Number of Frames:<input type="text" id="nf"></input><button onclick="inputVirtua
 </div>
 <br><br><br><br>
 <div id="messages">
-<h3>Sequence of Events</h3>
-</div>
+    <br>
+    <br>
+    </div>
+    </body>
+    </html>
 <input type="text" id="sequence"></input>
 <button onclick="fifo()">Submit</button>
+<br>
+<br>
+<br>
+</div>
 </body>
 </html>
-
-
-
-
-
-

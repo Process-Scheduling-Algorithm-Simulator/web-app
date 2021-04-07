@@ -2084,6 +2084,10 @@ button,
         content: '\f078';
         position: absolute;
         right: 0; }
+        #menu > ul > li:first-child {
+          border-top: 0;
+          margin-top: 0;
+          padding-top: 0; }
       #menu ul a.opener:hover:before, #menu ul span.opener:hover:before {
         color: #f56a6a; }
       #menu ul a.opener.active + ul, #menu ul span.opener.active + ul {

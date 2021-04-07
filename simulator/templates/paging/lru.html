@@ -1,12 +1,15 @@
+{% load static %}
 <html>
 <head>
-	<title>PAGE TABLE</title>
+	<title>LRU</title>
 	<meta charset="utf-8">
 <!--	<meta name="viewport" content="width=device-width,initial-scale=1.0">-->
-
+<link rel="stylesheet" href="{% static 'CSS/fifo.css' %}">
+<link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 </head>
-<body style="background-color:aqua ; text-align: center;">
-<h1> Least Recently Used Page Replacement </h1>
+<body>
+<h1 style="padding-bottom: 25px; margin-top: -300px;"> Least Recently Used (LRU)<br> <img src="{% static 'images/underline.png' %}"  alt="" height="20px" width="300px" style="padding-top: 10px;"/> </h1>
 <script>
 	var logical = [];
 	var framet = [];
@@ -100,15 +103,54 @@
 
 
 </script>
-Number of Pages:<input type="text" id="np"></input><br><br>
-Number of Frames:<input type="text" id="nf"></input><br><br>
-<button onclick="inputVirtual()" value="Add">Add</button>
+<p style="padding-bottom: 10px;">Least Recently Used (LRU):
+Least Recently Used page replacement algorithm keeps track of page usage over a short period of time.
+It works on the idea that the pages that have been most heavily used in the past are most likely to be used heavily in the future too.
+In LRU, whenever page replacement happens, the page which has not been used for the longest amount of time is replaced.
+</p>
+<div class="table">
+	<table>
+	  <thead>
+	    <tr>
+			<th style="font-size: 17px;">Advantages:</th>
+	        <th style="font-size: 17px;">Disadvantages:</th>
+
+	    </tr>
+	  </thead>
+	  <tbody >
+	    <tr>
+	      <td data-column="Advantages:" style="font-size: 17px;">It is Efficient.</td>
+	      <td data-column="Disadvantages:" style="font-size: 17px;">Complex Implementation.</td>
+	    </tr>
+	    <tr>
+	      <td data-column="Advantages:" style="font-size: 17px;">Doesn't suffer from Belady’s Anomaly.</td>
+	      <td data-column="Disadvantages:" style="font-size: 17px;">	It is Expensive.</td>
+
+	    </tr>
+	    <tr>
+	      <td data-column="Advantages:" style="font-size: 17px;">Easy to choose page which has faulted and hasn’t been used for a long time.</td>
+	      <td data-column="Disadvantages:" style="font-size: 17px;">Requires hardware support.</td>
+
+	    </tr>
+
+	  </tbody>
+	</table>
+</div>
+
+<hr style="color:black;">
+<div class="center">
+
+
+<h2>SIMULATION:</h2>
+
+Number of Pages:<input type="text" id="np"></input>
+Number of Frames:<input type="text" id="nf"></input><button onclick="inputVirtual()" value="Add">Add</button>
 <br><br>
-<div>
+<div id="simulation">
 	<table style="display:inline-block;" id="vtable" border="1">
 		<tr>
-			<th>Data</th>
-			<th>Page number</th>
+			<th style="font-size: 15px;">Data</th>
+			<th style="font-size: 15px;">Page number</th>
 		</tr>
 
 
@@ -116,8 +158,8 @@ Number of Frames:<input type="text" id="nf"></input><br><br>
 
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	<table style="display:inline-block;" border="1" id="r">
 		<tr>
-			<th>frame number</th>
-			<th>data</th>
+			<th style="font-size: 15px;">frame number</th>
+			<th style="font-size: 15px;">data</th>
 		</tr>
 
 	</table>
@@ -125,10 +167,16 @@ Number of Frames:<input type="text" id="nf"></input><br><br>
 </div>
 <br><br><br><br>
 <div id="messages">
-<h3>Sequence of Events</h3>
-</div>
+    <br>
+    <br>
+    </div>
+    </body>
+    </html>
 <input type="text" id="sequence"></input>
 <button onclick="lru()">Submit</button>
-
+<br>
+<br>
+<br>
+</div>
 </body>
 </html>

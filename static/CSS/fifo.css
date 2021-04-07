@@ -1,0 +1,107 @@
+body{
+background:rgb(235, 235, 235);  
+padding: 350px;
+font-family: 'Lora', serif;font-size: 22px;
+}
+
+h1{
+  font-size: 45px;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  font-size: 30px;
+}
+p{
+  font-size: 20px;
+
+}
+.table {
+	width: 750px;
+	border-collapse: collapse;
+	margin:50px auto;
+	}
+
+
+
+th {
+	background: #3498db;
+	color: white;
+	font-weight: bold;
+	}
+
+td, th {
+	padding: 10px;
+	border: 1px solid black;
+	text-align: left;
+	font-size: 10px;
+	}
+
+hr{
+  color: black;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table {
+	  	width: 100%;
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+@media (max-width: 768px) {
+  .float-right-sm {
+    float: right;
+  }
+}
+
+.center{
+  text-align: center;
+}
+
+/* Float to the right on screens that are equal to or greater than 769px wide */
+@media (min-width: 769px) {
+  .float-right-lg {
+    float: right;
+  }
+}
