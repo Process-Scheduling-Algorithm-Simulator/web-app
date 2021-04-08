@@ -272,6 +272,9 @@ function listen_t()
  document.getElementById('Server_t').style.background = "red";
  document.getElementById('Client_t').style.background = "orange";
  document.getElementById('myContainer_t').style.background = "white";
+
+ document.getElementById('Listen1').style.display = "none";
+
 } 
 
 function accept_t()
