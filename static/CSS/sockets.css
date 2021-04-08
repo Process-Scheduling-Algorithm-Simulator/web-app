@@ -38,16 +38,6 @@
   background: #f7d08a;
 }
 
-#Listen1,#Listen2,#Listen3
-{
-  width: 15px;
-  height: 15px;
-  display:none;
-  border:none;
-  position: relative;
-  background: #f7d08a;
-}
-
 #Client_u,#Client_t
 {
   width: 80px;
@@ -74,5 +64,6 @@
   border:none;
   overflow:hidden;
   position: absolute;
-  background-color: red;
+  color: white;
+  background-color: rgb(153, 0, 0);
 }

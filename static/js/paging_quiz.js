@@ -1,29 +1,29 @@
 "use strict"
 var questions = [
   {
-    question: "Which scheduling algorithm allocates the CPU first to the process that requests the CPU first?",
-    choices: ["first-come, first-served scheduling", "shortest job scheduling", "priority scheduling", "none of the mentioned"],
+    question: "Which of the following page replacement algorithms suffers from Belady’s Anomaly?",
+    choices: ["Optimal replacement", "LRU", "FIFO", "Both optimal replacement and FIFO"],
+    correctAnswer: 2
+  },
+  {
+    question: "A process refers to 5 pages, A, B, C, D, E in the order : A, B, C, D, A, B, E, A, B, C, D, E. If the page replacement algorithm is FIFO, the number of page transfers with an empty internal store of 3 frames is?",
+    choices: ["8", "10", "9", "7"],
+    correctAnswer: 2
+  },
+  {
+    question: "A FIFO replacement algorithm associates with each page the _______",
+    choices: ["time it was brought into memory", "size of the page in memory", "page after and before it", "all of the mentioned"],
     correctAnswer: 0
   },
   {
-    question: "In priority scheduling algorithm ____________",
-    choices: ["CPU is allocated to the process with highest priority", "CPU is allocated to the process with lowest priority", "Equal priority processes can not be scheduled", "None of the mentioned"],
-    correctAnswer: 0
-  },
-  {
-    question: "The interval from the time of submission of a process to the time of completion is termed as:",
-    choices: ["waiting time", "turnaround time", "response time", "throughput"],
-    correctAnswer: 1
-  },
-  {
-    question: "Process are classified into different groups in:",
-    choices: ["shortest job scheduling algorithm", "round robin scheduling algorithm", "priority scheduling algorithm", "multilevel queue scheduling algorithm"],
+    question: "LRU page – replacement algorithm associates with each page the ______",
+    choices: ["time it was brought into memory", "the time of that page’s last use", "page after and before it", "all of the mentioned"],
     correctAnswer: 3
   },
   {
-    question: "Time quantum is defined in:",
-    choices: ["shortest job scheduling algorithm", "round robin scheduling algorithm", "priority scheduling algorithm", "multilevel queue scheduling algorithm"],
-    correctAnswer: 1
+    question: "What are the two methods of the LRU page replacement policy that can be implemented in hardware?",
+    choices: ["Counters", "RAM & Registers", "Stack & Counters", "Registers"],
+    correctAnswer: 2
   }
 ];
 
@@ -141,7 +141,7 @@ Game.prototype.showQuestion = function(currentQuestion) {
 Game.prototype.resetQuiz = function(score, answers) {
   this.score = score;
 
-  $("#question").text("Game over!");
+  //$("#question").text("Game over!");
   $("#score").text("You scored " + this.score + " points!");
   $("#answers").html(answers).toggleClass("hide");
 

@@ -272,10 +272,6 @@ function listen_t()
  document.getElementById('Server_t').style.background = "red";
  document.getElementById('Client_t').style.background = "orange";
  document.getElementById('myContainer_t').style.background = "white";
- 
- document.getElementById('Listen1').style.display = "block";
- document.getElementById('Listen2').style.display = "block";
- document.getElementById('Listen3').style.display = "block";
 } 
 
 function accept_t()
@@ -285,8 +281,6 @@ function accept_t()
  document.getElementById('myContainer_t').style.background = "yellow";
  
  document.getElementById('Listen1').style.display = "none";
- document.getElementById('Listen2').style.display = "none";
- document.getElementById('Listen3').style.display = "none";
   
 } 
 
