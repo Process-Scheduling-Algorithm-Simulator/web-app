@@ -273,7 +273,7 @@ function listen_t()
  document.getElementById('Client_t').style.background = "orange";
  document.getElementById('myContainer_t').style.background = "white";
 
- document.getElementById('Listen1').style.display = "none";
+ document.getElementById('Listen1').style.display = "block";
 
 } 
 
